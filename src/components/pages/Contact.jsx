@@ -20,14 +20,13 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setError(false);
+emailjs.sendForm(
+  import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  formRef.current,
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+)
 
-    emailjs
-      .sendForm(
-        'service_4vgpcfh',      // Service ID
-        'template_7fe5wrd',     // Template ID
-        formRef.current,
-        'GAdsPyTGhu3QCJhI2'     // Public Key (sans PUBLIC_KEY_)
-      )
       .then(
         () => {
           setSubmitted(true);
