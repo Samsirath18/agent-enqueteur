@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/img/logo.png";
 
 function Footer() {
@@ -15,11 +16,11 @@ function Footer() {
         <div className="footer-links">
           <h4>Navigation</h4>
           <ul>
-            <li><a href="/">Accueil</a></li>
-            <li><a href="/apropos">À propos</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/methodologie">Méthodologie</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><Link to="/">Accueil</Link></li>
+            <li><Link to="/apropos">À propos</Link></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/methodologie">Méthodologie</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 
@@ -31,7 +32,6 @@ function Footer() {
         </div>
       </div>
 
-      {/* Logo centré */}
       <div className="footer-logo-center">
         <img src={logo} alt="Consultation & Enquête" />
       </div>
