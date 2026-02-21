@@ -2,7 +2,8 @@ import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import focus from "../../assets/img/focus.jpeg";
 import enquete from "../../assets/img/enquete.jpeg";
-import terrai from "../../assets/img/terrai.jpeg";
+import sam from "../../assets/img/sam.jpeg";
+
 
 export default function Accueil() {
   const navigate = useNavigate();
@@ -116,7 +117,7 @@ export default function Accueil() {
     {[
       { img: focus, title: "Focus groupes" },
       { img: enquete, title: "Entretiens individuels" },
-      { img: terrai, title: "Visites de terrain" },
+      { img: sam, title: "Visites de terrain" },
     ].map((item, index) => (
 
       <div className="col-md-4" key={index}>
